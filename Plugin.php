@@ -1,6 +1,6 @@
 <?php
 /**
- * PHPoole plugin TwBootstrap
+ * PHPoole Twitter Bootstrap plugin
  */
 Class TwBootstrap extends PHPoole_Plugin
 {
@@ -14,7 +14,7 @@ Class TwBootstrap extends PHPoole_Plugin
         //
         RecursiveCopy(__DIR__ . '/assets', $e->getTarget()->getWebsitePath() . '/' . PHPoole::PHPOOLE_DIRNAME . '/assets');
         RecursiveCopy(__DIR__ . '/layouts', $e->getTarget()->getWebsitePath() . '/' . PHPoole::PHPOOLE_DIRNAME . '/layouts');
-        $params['messages'][] = 'Twitter Boostrap layouts ans assets copied';
+        $params['messages'][] = 'Twitter Bootstrap layouts and assets copied';
         //
         $this->trace(self::DEBUG, $event, $params, 'OUT');
         return $params;

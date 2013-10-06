@@ -1,0 +1,15 @@
+{
+    "name": "PHPoole/Plugin-TwBootstrap",
+    "type": "symfony1-plugin",
+    "description": "PHPoole Twitter Bootstrap plugin",
+    "keywords": ["phpoole", "plugin", "bootstrap"],
+    "license": "MIT",
+    "require": {
+        "php": ">=5.3",
+        "Narno/PHPoole": "self.version",
+        "composer/installers": "~1.0"
+    },
+    "extra": {
+        "installer-name": "TwBootstrap"
+    }
+}

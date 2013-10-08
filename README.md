@@ -1,4 +1,5 @@
-[PHPoole](http://github.com/Narno/PHPoole/) Twitter Bootstrap plugin.
+[PHPoole](http://github.com/Narno/PHPoole/) Twitter Bootstrap plugin replace default layout by a [Twitter Bootstrap](http://getbootstrap.com) layout
+and copy needed assets.
 
 Installation
 ------------

@@ -1,22 +1,32 @@
 <?php
 /**
- * PHPoole Twitter Bootstrap plugin
+ * PHPoole plugin TwBootstrap
  */
 Class TwBootstrap extends PHPoole_Plugin
 {
     const DEBUG = false;
 
+    public function preInit($e)
+    {
+        $phpoole = $e->getTarget();
+        $phpoole->setMessage('TwBoostrap plugin available');
+    }
+
     public function postInit($e)
     {
-        $event  = $e->getName();
-        $params = $e->getParams();
-        $this->trace(self::DEBUG, $event, $params, 'IN');
+        $this->trace(self::DEBUG, $e);
         //
-        RecursiveCopy(__DIR__ . '/assets', $e->getTarget()->getWebsitePath() . '/' . PHPoole::PHPOOLE_DIRNAME . '/assets');
-        RecursiveCopy(__DIR__ . '/layouts', $e->getTarget()->getWebsitePath() . '/' . PHPoole::PHPOOLE_DIRNAME . '/layouts');
-        $params['messages'][] = 'Twitter Bootstrap layouts and assets copied';
+        $phpoole = $e->getTarget();
+        RecursiveCopy(
+            __DIR__ . '/assets',
+            $phpoole->getWebsitePath() . '/' . PHPoole::PHPOOLE_DIRNAME . '/' . PHPoole::ASSETS_DIRNAME
+        );
+        RecursiveCopy(
+            __DIR__ . '/layouts',
+            $phpoole->getWebsitePath() . '/' . PHPoole::PHPOOLE_DIRNAME . '/' . PHPoole::LAYOUTS_DIRNAME
+        );
+        $phpoole->setMessage('Twitter Boostrap layouts ans assets copied');
         //
-        $this->trace(self::DEBUG, $event, $params, 'OUT');
-        return $params;
+        $this->trace(self::DEBUG, $e);
     }
 }

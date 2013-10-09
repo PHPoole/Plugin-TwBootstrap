@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ site.language }}">
   <head>
+    {% block head %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{ site.description }}">
@@ -12,12 +13,14 @@
       <script src="{{ site.base_url }}/assets/js/html5shiv.js"></script>
       <script src="{{ site.base_url }}/assets/js/respond.min.js"></script>
     <![endif]-->
+    {% endblock head %}
   </head>
   <body>
     {% if source.repository %}
     <a href="{{ source.repository }}"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 9999;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
     {% endif %}
     <div id="wrap">
+      {% block navbar %}
       <div class="navbar navbar-default navbar-fixed-top">
         <div class="container">
           <div class="navbar-header">
@@ -34,16 +37,19 @@
               <li {% if item.path == path %}class="active"{% endif %}><a href="{{ site.base_url }}{% if item.path != '' %}/{{ item.path }}{% endif %}">{{ item.title|e }}</a></li>
               {% endfor %}
             </ul>
-          </div><!--/.nav-collapse -->
+          </div>
         </div>
       </div>
-      <!-- Begin page content -->
+      {% endblock navbar %}
       <div class="container">
+        {% block pageheader %}
         <div class="page-header">
           <h1>{{ site.name}}</h1>
           <p class="lead"><em>{{ site.baseline }}</em></p>
         </div>
+        {% endblock pageheader %}
         {{ content }}
+        {% block pagination %}
         {% if previous or next %}<hr />{% endif %}
         {% if previous %}
         <a href="{{ site.base_url }}/{{ previous }}">< {{ prevTitle }}</a>
@@ -52,14 +58,19 @@
         {% if next %}
         <a href="{{ site.base_url }}/{{ next }}">{{ nextTitle }} ></a>
         {% endif %}
+        {% endblock pagination %}
       </div>
     </div>
+    {% block footer %}
     <div id="footer">
       <div class="container">
-        <p class="text-muted credit">&copy; <a href="{{ author.home }}">{{ author.name }}</a> {{ 'now'|date('Y') }} - Powered by <a href="http://narno.org/PHPoole">PHPoole</a></p>
+        <p class="text-muted credit">&copy; <a href="{{ author.home }}">{{ author.name }}</a> {{ 'now'|date('Y') }} - Powered by <a href="{{ phpoole.url }}" title="PHPoole {{ phpoole.version }}">PHPoole</a></p>
       </div>
     </div>
+    {% endblock footer %}
+    {% block javascript %}
     <script src="{{ site.base_url }}/assets/js/jquery.min.js"></script>
     <script src="{{ site.base_url }}/assets/js/bootstrap.min.js"></script>
+    {% endblock javascript %}
   </body>
 </html>

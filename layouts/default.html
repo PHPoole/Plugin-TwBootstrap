@@ -44,6 +44,14 @@
           <p class="lead"><em>{{ site.baseline }}</em></p>
         </div>
         {{ content }}
+        {% if previous or next %}<hr />{% endif %}
+        {% if previous %}
+        <a href="{{ site.base_url }}/{{ previous }}">< {{ prevTitle }}</a>
+        {% endif %}
+        {% if previous and next %}&nbsp;|&nbsp;{% endif %}
+        {% if next %}
+        <a href="{{ site.base_url }}/{{ next }}">{{ nextTitle }} ></a>
+        {% endif %}
       </div>
     </div>
     <div id="footer">

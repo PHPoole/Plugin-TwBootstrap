@@ -1,4 +1,6 @@
 <?php
+namespace PHPoole;
+
 /**
  * PHPoole plugin TwBootstrap
  */

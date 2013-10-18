@@ -4,7 +4,7 @@ namespace PHPoole;
 /**
  * PHPoole plugin TwBootstrap
  */
-Class TwBootstrap extends PHPoole_Plugin
+Class TwBootstrap extends Plugin
 {
     const DEBUG = false;
 

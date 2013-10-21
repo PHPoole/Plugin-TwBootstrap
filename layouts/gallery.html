@@ -1,9 +1,0 @@
-{% extends "default.html" %}
-
-{% block pageheader %}{% endblock %}
-
-{% block pagefooter %}
-{% for name, localpath in page.gallery %}
-<p><img src="{{ page.path }}/{{ name }}" class="img-responsive" /></p>
-{% endfor %}
-{% endblock pagefooter %}

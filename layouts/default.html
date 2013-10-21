@@ -49,6 +49,8 @@
         </div>
         {% endblock pageheader %}
         {{ page.content }}
+        {% block pagefooter %}
+        {% endblock pagefooter %}
         {% block pagination %}
         {% if page.previous.path or page.next.path %}<hr />{% endif %}
         {% if page.previous.path %}

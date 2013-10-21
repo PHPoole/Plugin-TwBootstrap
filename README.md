@@ -5,16 +5,20 @@ Installation
 ------------
 
 Add this to your PHPoole ```composer.json``` file:
-```
-{
-  "require": {
-    "PHPoole/Plugin-TwBootstrap": "master-dev"
-  },
-  "repositories": [
+
     {
-      "type": "vcs",
-      "url": "https://github.com/PHPoole/Plugin-TwBootstrap"
+      "require": {
+        "PHPoole/Plugin-TwBootstrap": "master-dev"
+      },
+      "repositories": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/PHPoole/Plugin-TwBootstrap"
+        }
+      ]
     }
-  ]
-}
-```
+
+Usage
+-----
+
+Just run a new website ```--init``` and see the magic!

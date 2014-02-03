@@ -6,7 +6,7 @@
     "license": "MIT",
     "require": {
         "php": ">=5.3",
-        "Narno/PHPoole": "self.version",
+        "narno/phpoole": "self.version",
         "composer/installers": "~1.0"
     },
     "extra": {

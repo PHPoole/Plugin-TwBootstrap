@@ -1,5 +1,5 @@
 {
-    "name": "PHPoole/Plugin-TwBootstrap",
+    "name": "phpoole/plugin-twbootstrap",
     "type": "symfony1-plugin",
     "description": "PHPoole Twitter Bootstrap plugin",
     "keywords": ["phpoole", "plugin", "bootstrap"],

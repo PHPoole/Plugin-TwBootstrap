@@ -10,7 +10,7 @@ Class TwBootstrap extends Plugin
     public function preInit($e)
     {
         $phpoole = $e->getTarget();
-        $phpoole->addMessage('TwBoostrap plugin available');
+        $phpoole->addMessage('TwBootstrap plugin available');
     }
 
     public function postInit($e)
@@ -24,6 +24,6 @@ Class TwBootstrap extends Plugin
             __DIR__ . '/layouts',
             $phpoole->getWebsitePath() . '/' . PHPoole::PHPOOLE_DIRNAME . '/' . PHPoole::LAYOUTS_DIRNAME
         );
-        $phpoole->addMessage('Twitter Boostrap layouts ans assets copied');
+        $phpoole->addMessage('Twitter Bootstrap layouts and assets copied');
     }
 }

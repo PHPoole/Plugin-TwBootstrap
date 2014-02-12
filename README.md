@@ -4,21 +4,10 @@ and copy needed assets.
 Installation
 ------------
 
-Add this to your PHPoole ```composer.json``` file:
+    php composer.phar require phpoole/plugin-twbootstrap:@dev --prefer-dist
 
-    {
-      "require": {
-        "phpoole/plugin-twbootstrap": "dev-master"
-      },
-      "repositories": [
-        {
-          "type": "vcs",
-          "url": "https://github.com/PHPoole/Plugin-TwBootstrap"
-        }
-      ]
-    }
 
 Usage
 -----
 
-Just run a new website ```--init``` and see the magic!
+Just run a new website (```--init```) and see the magic!

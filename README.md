@@ -8,7 +8,7 @@ Add this to your PHPoole ```composer.json``` file:
 
     {
       "require": {
-        "phpoole/plugin-twbootstrap": "master-dev"
+        "phpoole/plugin-twbootstrap": "dev-master"
       },
       "repositories": [
         {

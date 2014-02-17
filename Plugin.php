@@ -16,14 +16,28 @@ Class TwBootstrap extends Plugin
     public function postInit($e)
     {
         $phpoole = $e->getTarget();
-        Utils\RecursiveCopy(
-            __DIR__ . '/assets',
-            $phpoole->getWebsitePath() . '/' . PHPoole::PHPOOLE_DIRNAME . '/' . PHPoole::ASSETS_DIRNAME
+        $componentsDir = realpath(__DIR__ . '/../../components');
+        // bootstrap
+        // css
+        copy(
+            $componentsDir . '/bootstrap/css/bootstrap.min.css',
+            $phpoole->getWebsitePath() . '/' . PHPoole::PHPOOLE_DIRNAME . '/' . PHPoole::ASSETS_DIRNAME . '/css/bootstrap.min.css'
         );
+        // fonts
         Utils\RecursiveCopy(
-            __DIR__ . '/layouts',
-            $phpoole->getWebsitePath() . '/' . PHPoole::PHPOOLE_DIRNAME . '/' . PHPoole::LAYOUTS_DIRNAME
+            $componentsDir . '/bootstrap/fonts',
+            $phpoole->getWebsitePath() . '/' . PHPoole::PHPOOLE_DIRNAME . '/' . PHPoole::ASSETS_DIRNAME . '/fonts'
         );
-        $phpoole->addMessage('Twitter Bootstrap layouts and assets copied');
+        // js
+        copy(
+            $componentsDir . '/bootstrap/js/bootstrap.min.js',
+            $phpoole->getWebsitePath() . '/' . PHPoole::PHPOOLE_DIRNAME . '/' . PHPoole::ASSETS_DIRNAME . '/js/bootstrap.min.js'
+        );
+        // jquery
+        copy(
+            $componentsDir . '/jquery/jquery.min.js',
+            $phpoole->getWebsitePath() . '/' . PHPoole::PHPOOLE_DIRNAME . '/' . PHPoole::ASSETS_DIRNAME . '/js/jquery.min.js'
+        );
+        $phpoole->addMessage('Twitter Bootstrap assets copied');
     }
 }

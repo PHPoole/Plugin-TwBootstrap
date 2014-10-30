@@ -1,4 +1,4 @@
-The [PHPoole](http://github.com/Narno/PHPoole/) [Twitter Bootstrap](http://getbootstrap.com) plugin download [components/bootstrap](https://github.com/components/bootstrap) via Composer and copy only needed assets.
+The [PHPoole](http://phpoole.narno.org) [Twitter Bootstrap](http://getbootstrap.com) plugin download [components/bootstrap](https://github.com/components/bootstrap) via Composer and copy only needed assets.
 
 Installation
 ------------
